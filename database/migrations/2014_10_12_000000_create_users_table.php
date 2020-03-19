@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
             $table->string('ethnicity')->nullable();
             $table->string('gender')->nullable();
             $table->string('dob')->nullable();
+            $table->text('description')->nullable();
             $table->integer('status')->default('0');
             $table->rememberToken();
             $table->timestamps();

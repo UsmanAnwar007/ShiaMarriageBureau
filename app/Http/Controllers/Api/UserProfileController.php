@@ -64,6 +64,17 @@ class UserProfileController extends Controller
 
         }
     }
+
+    public function userdescription(Request $request){
+        $user=User::find($request->id);
+        $user->description=$request->description;
+        if($user->save()){
+            return Response::json(['success'=>'1','message'=>'Profile Saved']);
+        }else{
+            return Response::json(['success'=>'0','message'=>'Something is wrong!']);
+
+        }
+    }
     
     
 }
