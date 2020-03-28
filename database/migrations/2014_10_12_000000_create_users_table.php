@@ -29,6 +29,7 @@ class CreateUsersTable extends Migration
             $table->string('dob')->nullable();
             $table->text('description')->nullable();
             $table->integer('status')->default('0');
+            $table->string('type')->default('user');
             $table->rememberToken();
             $table->timestamps();
         });
